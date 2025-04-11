@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Images/Favicon.png" type="image/x-icon">
+
+    <!-- Font-Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1>WEATHER APP</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+
+
+            <!-- grant location container -->
+            <div class="sub-cont grant-locationContainer">
+                <img src="./Images/location.png" alt="grant-locationIMG" height="80px" width="80px" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+
+            <!-- Search Weather container -->
+            <form  class="form-container"  data-searchForm>
+                <input type="text" placeholder="Search for City..." data-searchInput>
+                <button class="btn" type="submit" data-searchBtn>
+                    <img src="./Images/search.png" width="20" height="20" loading="lazy" alt="search-button">
+                </button>
+            </form>
+
+            <!-- Loading Screen Container -->
+            <div class="loading-container">
+                <img src="./Images/loading.gif" width="150" height="150" alt="loading" >
+                <p>Loading</p>
+            </div>
+
+            <!-- Not found -->
+            <div class="not-found">
+                <img src="./Images/not-found.png" alt="">
+                <p not-foundMsg></p>
+            </div>
+
+            <!-- Weather container -->
+            <div class="user-info-container">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <p data-weatherDesc></p>
+
+                <img weatherIcon>
+
+                <p dataTemp></p>
+
+
+                <!-- 3 cards parameter -->
+
+                <div class="parameter-container">
+
+                    <!-- card1 -->
+                    <div class="parameter">
+                        <img src="./Images/wind.png" alt="Windspeed">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- card2 -->
+                    <div class="parameter">
+                        <img src="./Images/humidity.png" alt="Humidity" >
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- Card3 -->
+                    <div class="parameter">
+                        <img src="./Images/cloud.png" alt="Clouds">
+                        <p>Clouds</p>
+                        <p data-clouds></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
